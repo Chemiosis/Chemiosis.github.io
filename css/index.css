@@ -10,7 +10,6 @@ html {
   font-size: 62.5%;
 }
 .spinner-container {
-position: absolute;
 left: 0;
 top: 0;
 width: 100%;
@@ -21,15 +20,15 @@ justify-content: center;
 align-items: center;
 transition: all 1s;
 z-index: 300;
+position: absolute;
 }
 .circles {
-width: 8rem;
-height: 8rem;
+width: 12rem;
+height: 12rem;
 position: relative;
 opacity: 0;
-visibility: hidden;
 animation: displayCircles 4s;
-
+border-radius: 50%;
 }
 @keyframes displayCircles {
 0% {
@@ -50,13 +49,13 @@ visibility: hidden;
 }
 }
 
-.circles div {
+.circle {
 animation: circles 1.2s 
 cubic-bezier(0.5,0,0.5,1) 
 infinite;
-transform-origin: 4rem 4rem;
+transform-origin: center;
 }
-.circles div::after {
+.circle::after {
 content: "";
 position: absolute;
 width: 0.7rem;
@@ -65,73 +64,73 @@ border-radius: 50%;
 background-color: #c29525;
 margin: -0.4rem 0 0 -0.4rem;
 }
-.circles div:nth-child(1){
+.circle:nth-child(1){
 animation-delay: -0.036s;
 }
-.circles div:nth-child(1)::after {
+.circle:nth-child(1)::after {
 top: 6.3rem;
 bottom: 6.3rem;
 }
-.circles div:nth-child(2) {
+.circle:nth-child(2) {
 animation-delay: -0.082s;
 }
-.circles div:nth-child(2)::after {
+.circle:nth-child(2)::after {
 top: 6.8rem; 
 bottom: 5.6rem;
 }
 
-.circles div:nth-child(3) {
+.circle:nth-child(3) {
 animation-delay: -0.128s;
 }
 
-.circles div:nth-child(3)::after {
+.circle:nth-child(3)::after {
 top: 7.1rem; 
 bottom: 4.8rem;
 }
 
-.circles div:nth-child(4) {
+.circle:nth-child(4) {
 animation-delay:-0.174s;
 }
 
-.circles div:nth-child(4)::after {
+.circle:nth-child(4)::after {
 top: 7.2rem; 
 bottom: 4rem;
 }
 
 
-.circles div:nth-child(5) {
+.circle:nth-child(5) {
 animation-delay:-0.22s; 
 }
 
-.circles div:nth-child(5)::after {
+.circle:nth-child(5)::after {
 top: 7.1rem; 
 bottom: 3.2rem;
 }
 
-.circles div:nth-child(6){
-animation-delay: -0.266s;
+.circle:nth-child(6){
+animation-delay: -0.276s;
 }
 
-.circles div:nth-child(6)::after {
+.circle:nth-child(6)::after {
 top: 6.8rem; 
 bottom: 2.4rem;
 }
 
-.circles div:nth-child(7) {
-animation-delay: -0.312s;
+.circle:nth-child(7) {
+animation-delay: -0.332s;
 
 }
 
-.circles div:nth-child(7)::after {
+.circle:nth-child(7)::after {
 top: 6.3rem; 
 bottom: 1.7rem;
 }
 
-.circles div:nth-child(8) {
-animation-delay: -0.348s;
+.circle:nth-child(8) {
+animation-delay: -0.378s;
 }
 
-.circles div:nth-child(8)::after {
+.circle:nth-child(8)::after {
 top: 5.6rem; 
 bottom: 1.2rem;
 }

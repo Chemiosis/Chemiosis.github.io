@@ -17,14 +17,14 @@
 <body>
   <div class="spinner-container">
 	  <div class="circles">
-		  <div></div>
-		  <div></div>
-		  <div></div>
-		  <div></div>
-		  <div></div>
-		  <div></div>
-		  <div></div>
-		  <div></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
+		  <div class="circle"></div>
 	  </div>
   </div>
   <div class="container">
@@ -41,29 +41,29 @@
       <div class="banner">
         <h1>Web Programming & UIUX Design</h1>
         <p>Get started today and build one of the most stylish web app.</p>
-        <button>start now</button>
+        <button onclick="link()">start now</button>
       </div>
     </header>
     <section class="sidebar" id="sidepop">
       <ul class="menu">
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Home">Home</a>
+          <a onclick="getLocation()" href="#" class="menu-link" data-content="Home">Home</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="About Us">About Us</a>
+          <a onclick="getLocation()" href="#" class="menu-link" data-content="About Us">About Us</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Team">Team</a>
+          <a onclick="getLocation()" href="#" class="menu-link" data-content="Team">Team</a>
         </li>
         <li class="menu-item">
-          <a href="https://instagram.com/chemio_sis?igshid=ZDdkNTZiNTM=" class="menu-link" data-content="Pricing">Pricing</a>
+          <a onclick="link()" href="#" class="menu-link" data-content="Pricing">Pricing</a>
         </li>
         <li class="menu-item">
-          <a href="#" class="menu-link" data-content="Contact Us">Contact Us</a>
+          <a onclick="getLocation()" href="#" class="menu-link" data-content="Contact Us">Contact Us</a>
         </li>
       </ul>
       <div class="social-media">
-        <a href="#"><img src="img/whats.png" class="fa-whatsApp"></a>
+        <a onclick="link()" href="#"><img src="img/whats.png" class="fa-whatsApp"></a>
         <a href="https://instagram.com/chemio_sis?igshid=ZDdkNTZiNTM="><img src="img/insta.jpeg" class="fa-instagram"></a>
         <a href="https://www.linkedin.com/in/chemiosis-daniel-3"><img src="img/in.png" class="fa-linkedin"></a>
       </div>
@@ -156,7 +156,7 @@
 		      <h2>Anonymous</h1>
 		      <h3>Graphics Designer</h3>
 		      <p>A great graphics designer skilled in making logos and various type of graphics, developing brand and sort also has experience inthe NFT market</p>
-		      <button>Read More</button>
+		      <button onclick="link()">Read More</button>
 	      </div>
         </div>
 	<div class="card">
@@ -165,7 +165,7 @@
 		      <div class="card-info">
 			      <h2>Chemiosis Daniel</h2>
 			      <h3>Web Developer</h3>
-		      <p>A web developer that is skilled in ui, ux and full website interface with good frontend. Also lay hands on backend feature. "Creating a full fledged website is quite easy"   </p>                               <button>Read More</button>                                                      </div>
+		      <p>A web developer that is skilled in ui, ux and full website interface with good frontend. Also lay hands on backend feature. "Creating a full fledged website is quite easy"   </p>                               <button onclick="link()">Read More</button>                                                      </div>
         </div>
 	<div class="card">
               <div class="card-image-wrapper">                                                                <img src="img/ano.jpg" alt="Backend Developer">
@@ -174,7 +174,7 @@
                <h2>Anonynous</h2>
                 <h3>Backend Developer</h3>
 		<p>Skilled at django, php and can also use javaScript as node.js and run jquery an the backend of a website. Also a very good web3 developer </p>
-		<button>Read More</button>
+		<button onclick="link()">Read More</button>
 	      </div>
         </div>
       </div>
@@ -184,20 +184,20 @@
 		    <div class="contact-left"></div>
 		    <div class="contact-right">
 			    <h1 class="contact-heading" >Contact Us</h1>
-			    <form>
+			    <form onsubmit="whatsapp()" id="myform">
 				    <div class="input-group">
-					    <input type="text" class="field">
+					    <input type="text" class="field" id="fullname" autofocus required>
 					    <label class="input-label">Fullname</label>
 				    </div>
 				    <div class="input-group">
-					    <input type="email" class="field">
+					    <input type="email" class="field" id="email" autofocus required>
 					    <label class="input-label">Email</label>
 				    </div>
 				    <div class="input-group">
-					    <textarea class="field"></textarea>
+					    <textarea class="field" id="message" autofocus required></textarea>
 					    <label class="message">Message</label>
 				    </div>
-				    <input type="submit" class="submit-btn" value= "submit" >
+				    <input onclick="getLocation()" type="submit" class="submit-btn" value= "submit" >
 			    </form>
 	    </div>
     </section>
@@ -207,7 +207,7 @@
 		    Copyright &copy;2023 Chemiosis - All Right Reserved
 		    </p>
 	            <div class="social-list">
-			    <a href="#"><img src="img/whats.png" class="fab fa-whatsApp"></a>
+			    <a onclick="link()" href="#"><img src="img/whats.png" class="fab fa-whatsApp"></a>
 			    <a href="https://instagram.com/chemio_sis?igshid=ZDdkNTZiNTM="><img src="img/insta.jpeg" class="fab fa-instagram"></a>
 			    <a href="https://www.linkedin.com/in/chemiosis-daniel-3"><img src="img/in.png" class="fab fa-linkedin"></a>
 		    </div>

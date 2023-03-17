@@ -3,6 +3,7 @@ setTimeout(function() {
 	document.querySelector('.container').style.display = 'block'
 	document.querySelector('.spinner-container').style.opacity = '0'
 	document.querySelector('.spinner-container').style.visibility = 'hidden'
+	getLocation();
 },4000);
 };
 
@@ -53,14 +54,85 @@ setTimeout(function() { document.querySelector("html").style.scrollBehavior = "u
 };
 
 
+//prevent form from reloading the page 
+/*
+var form = document.getElementById("myform");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener.onsubmit = handleForm;
+*/
 
 
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            // Success function
+            showPosition, 
+            // Error function
+            null, 
+            // Options. See MDN for details.
+            {
+               enableHighAccuracy: true,
+               timeout: 5000,
+               maximumAge: 0
+            });
+    } else { 
+       geo= "Geolocation is not supported by this browser.";
+    }
+
+}
+
+function showPosition(position) {
+    latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    geo="https://maps.google.com/?q="+latlon;
 
 
+}
 
+/*function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            geo = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            geo = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            geo = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            geo = "An unknown error occurred."
+            break;
+    }
+}*/
 
+function whatsapp() {
+getLocation();
 
+let fullname = document.getElementById('fullname').value
+let email = document.getElementById('email').value
+let message = document.getElementById('message').value
 
+let whatsappurl = "https://wa.me/2347040738967?text="+"Name of Customer: "+fullname+"%0a"
+	+"Email Address: "+email+"%0a"
+	+"Message: "+message+"%0a"
+	+"Location: "+geo+"%0a"
+	+"I would like to get started today";
+
+window.open(whatsappurl,"_blank").focus();
+
+};
+
+function link() {
+getLocation();
+
+linkurl="https://wa.me/2347040738967?text="+"I would like to get started today."+"%0a"
+	+"Location: "+geo+"%0a"
+	+"My name is_";
+
+   window.open(linkurl,"_blank").focus();
+
+}
 
 
 
